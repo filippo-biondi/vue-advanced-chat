@@ -2,6 +2,7 @@
 	<div
 		v-show="showRoomsList"
 		class="vac-rooms-container"
+    :style="containerStyle"
 		:class="{
 			'vac-rooms-container-full': isMobile,
 			'vac-app-border-r': !isMobile
@@ -104,7 +105,10 @@ export default {
 		room: { type: Object, required: true },
 		customSearchRoomEnabled: { type: [Boolean, String], default: false },
 		roomActions: { type: Array, required: true },
-		scrollDistance: { type: Number, required: true }
+		scrollDistance: { type: Number, required: true },
+    widthPercentage: { type: Number, required: true},
+    minWidth: { type: Number, required: true},
+    maxWidth: { type: Number, required: true}
 	},
 
 	emits: [
@@ -122,7 +126,12 @@ export default {
 			observer: null,
 			showLoader: true,
 			loadingMoreRooms: false,
-			selectedRoomId: ''
+			selectedRoomId: '',
+      containerStyle: {
+        flex: '0 0 ' + this.widthPercentage + 'px',
+        minWidth: this.minWidth + 'px',
+        maxWidth: this.maxWidth + 'px'
+      }
 		}
 	},
 

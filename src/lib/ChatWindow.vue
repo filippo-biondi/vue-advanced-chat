@@ -18,6 +18,9 @@
 				:link-options="linkOptionsCasted"
 				:is-mobile="isMobile"
 				:scroll-distance="scrollDistance"
+        :width-percentage="roomListWidthPercentage"
+        :min-width="roomListMinWidth"
+        :max-width="roomListMaxWidth"
 				@fetch-room="fetchRoom"
 				@fetch-more-rooms="fetchMoreRooms"
 				@loading-more-rooms="loadingMoreRooms = $event"
@@ -207,7 +210,10 @@ export default {
 			type: [Object, String],
 			default: () => ({ minUsers: 3, currentUser: false })
 		},
-		emojiDataSource: { type: String, default: undefined }
+		emojiDataSource: { type: String, default: undefined },
+    roomListWidthPercentage: {type: Number, default: 25},
+    roomListMinWidth: {type: Number, default: 260},
+    roomListMaxWidth: {type: NUmber, default: 500}
 	},
 
 	emits: [

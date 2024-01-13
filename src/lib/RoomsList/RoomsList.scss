@@ -1,9 +1,6 @@
 .vac-rooms-container {
 	display: flex;
 	flex-flow: column;
-	flex: 0 0 20%;
-	min-width: 100px;
-	max-width: 500px;
 	position: relative;
 	background: var(--chat-sidemenu-bg-color);
 	height: 100%;
