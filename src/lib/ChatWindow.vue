@@ -213,7 +213,7 @@ export default {
 		emojiDataSource: { type: String, default: undefined },
     roomListWidthPercentage: {type: Number, default: 25},
     roomListMinWidth: {type: Number, default: 260},
-    roomListMaxWidth: {type: NUmber, default: 500}
+    roomListMaxWidth: {type: Number, default: 500}
 	},
 
 	emits: [
