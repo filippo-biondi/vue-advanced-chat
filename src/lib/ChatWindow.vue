@@ -211,9 +211,9 @@ export default {
 			default: () => ({ minUsers: 3, currentUser: false })
 		},
 		emojiDataSource: { type: String, default: undefined },
-    roomListWidthPercentage: {type: Number, default: 25},
-    roomListMinWidth: {type: Number, default: 260},
-    roomListMaxWidth: {type: Number, default: 500}
+    roomListWidthPercentage: { type: String, default: '25' },
+    roomListMinWidth: { type: String, default: '260' },
+    roomListMaxWidth: { type: String, default: '500' }
 	},
 
 	emits: [

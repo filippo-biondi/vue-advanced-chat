@@ -106,9 +106,9 @@ export default {
 		customSearchRoomEnabled: { type: [Boolean, String], default: false },
 		roomActions: { type: Array, required: true },
 		scrollDistance: { type: Number, required: true },
-    widthPercentage: { type: Number, required: true},
-    minWidth: { type: Number, required: true},
-    maxWidth: { type: Number, required: true}
+    widthPercentage: { type: String, required: true },
+    minWidth: { type: String, required: true },
+    maxWidth: { type: String, required: true }
 	},
 
 	emits: [
